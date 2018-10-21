@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -21,39 +22,45 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_alldocs_quckview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:clipChildren="true"
+        android:clipToPadding="true"
         android:orientation="horizontal"
         android:scrollbars="none"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_alldocs_quckview_label" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_alldocs_quckview_label"
+        tools:listitem="@layout/item_alldocs_quckview" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_alldocs_docs"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
         android:clipToPadding="true"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_alldocs_quckview" />
+        app:layout_constraintTop_toBottomOf="@+id/rv_alldocs_quckview"
+        tools:listitem="@layout/item_alldocs_document" />
 
     <FrameLayout
         android:id="@+id/view_alldocs_loading"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:visibility="gone">
 
         <ProgressBar
             android:layout_width="84dp"
             android:layout_height="84dp"
-            android:gravity="center"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:gravity="center" />
 
     </FrameLayout>
 

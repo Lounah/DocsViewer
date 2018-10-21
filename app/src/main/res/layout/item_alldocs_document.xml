@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_item_alldocs_document"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:src="@drawable/ic_document_gray_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_alldocs_document_doctitle"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="Название файла.pdf"
+        app:layout_constraintEnd_toStartOf="@+id/iv_item_alldocs_advanced"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_alldocs_document"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_item_alldocs_advanced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:src="@drawable/ic_dots_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_alldocs_document_date"
+        style="@style/TextStyle.Small.Light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:drawablePadding="@dimen/app_margin_medium"
+        android:drawableStart="@drawable/ic_clock_18dp"
+        android:text="12.08.18 10:47"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_alldocs_document"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_alldocs_document_doctitle" />
+
+    <View
+        android:id="@+id/view_circle_divider"
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/ic_dot"
+        app:layout_constraintStart_toEndOf="@id/tv_item_alldocs_document_date"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_alldocs_document_doctitle" />
+
+    <TextView
+        android:id="@+id/tv_item_alldocs_document_size"
+        style="@style/TextStyle.Small.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="48 Гб"
+        app:layout_constraintStart_toEndOf="@id/view_circle_divider"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_alldocs_document_doctitle" />
+
+</android.support.constraint.ConstraintLayout>
