@@ -1,3 +1,14 @@
 <resources>
+
+    <!-- App -->
     <string name="app_name">DocsViewer</string>
+    <string name="documents">Документы</string>
+    <string name="all">Все</string>
+    <string name="sections">Разделы</string>
+    <string name="favourites">Избранное</string>
+    
+    <!-- All docs screen -->
+    <string name="quick_view">Быстрый доступ</string>
+    <string name="opened_at">Открыто</string>
+
 </resources>
