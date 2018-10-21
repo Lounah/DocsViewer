@@ -5,8 +5,11 @@
     <color name="greenDark">#2e6e42</color>
     <color name="green">#39c853</color>
     <color name="white">#FFFFFF</color>
+    <color name="greenSemiTransparent">#c4efcc</color>
 
+    <!-- App -->
     <color name="colorPrimary">@color/green</color>
     <color name="colorPrimaryDark">@color/greenDark</color>
     <color name="colorAccent">@color/white</color>
+    <color name="colorTabLayoutTextUnselected">@color/greenSemiTransparent</color>
 </resources>
