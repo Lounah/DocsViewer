@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".presentation.main.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
-        app:elevation="0dp">
+        android:layout_height="wrap_content"
+        android:elevation="4dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/app_bar_height"
             app:title="@string/documents"
             app:titleTextColor="@color/white" />
 
@@ -23,7 +23,8 @@
             android:id="@+id/tablayout_main"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            android:background="@color/green"/>
+            android:background="@color/green"
+            app:tabSelectedTextColor="@color/white"/>
 
     </android.support.design.widget.AppBarLayout>
 
