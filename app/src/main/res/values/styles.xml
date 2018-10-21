@@ -7,4 +7,23 @@
         <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
     </style>
 
+    <style name="TextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/proxima_nova</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.Small">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextStyle.Small.Light">
+        <item name="android:textColor">@color/grayLight</item>
+    </style>
+
+    <style name="TextStyle.Large">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+
 </resources>
