@@ -16,3 +16,6 @@ A simple file viewer
   <img src="https://github.com/Lounah/DocsViewer/blob/dev/screenshots/collapsed.jpg" width="270" height="480" alt="Screenshot" style="max-width:100%;">
 </a>
 </p>
+
+# Download Link
+https://yadi.sk/d/cPohw8jqoOXY8A
