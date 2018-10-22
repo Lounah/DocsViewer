@@ -18,4 +18,4 @@ A simple file viewer
 </p>
 
 # Download Link
-https://yadi.sk/d/cPohw8jqoOXY8A
+https://yadi.sk/d/05eQwfWj4_lUxw
