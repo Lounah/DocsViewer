@@ -2,8 +2,12 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_item_document"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?selectableItemBackground"
+    tools:layout_height="500dp">
 
     <ImageView
         android:id="@+id/iv_item_alldocs_document"
@@ -22,10 +26,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:maxLines="2"
+        android:layout_marginTop="24dp"
         android:ellipsize="end"
-        android:text="Название файла.pdf"
+        android:maxLines="2"
         app:layout_constraintEnd_toStartOf="@+id/iv_item_alldocs_advanced"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/iv_item_alldocs_document"
@@ -36,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
+        android:background="?selectableItemBackground"
         android:src="@drawable/ic_dots_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -49,7 +53,7 @@
         android:layout_marginTop="4dp"
         android:drawablePadding="@dimen/app_margin_medium"
         android:drawableStart="@drawable/ic_clock_18dp"
-        android:text="12.08.18 10:47"
+        android:text="@string/stub_doc_date"
         app:layout_constraintStart_toEndOf="@+id/iv_item_alldocs_document"
         app:layout_constraintTop_toBottomOf="@+id/tv_item_alldocs_document_doctitle" />
 
@@ -57,7 +61,7 @@
         android:id="@+id/view_circle_divider"
         android:layout_width="4dp"
         android:layout_height="4dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/ic_dot"
         app:layout_constraintStart_toEndOf="@id/tv_item_alldocs_document_date"
@@ -68,10 +72,20 @@
         style="@style/TextStyle.Small.Light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
-        android:text="48 Гб"
+        android:text="@string/stub_doc_size"
         app:layout_constraintStart_toEndOf="@id/view_circle_divider"
         app:layout_constraintTop_toBottomOf="@id/tv_item_alldocs_document_doctitle" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grayDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_alldocs_document_date"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_alldocs_document_size" />
 
 </android.support.constraint.ConstraintLayout>

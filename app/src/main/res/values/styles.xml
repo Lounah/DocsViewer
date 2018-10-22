@@ -13,11 +13,19 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="BorderlessButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
     <style name="TextStyle.Small">
         <item name="android:textSize">14sp</item>
     </style>
 
     <style name="TextStyle.Small.Light">
+        <item name="android:textColor">@color/grayLight</item>
+    </style>
+
+    <style name="TextStyle.Light">
         <item name="android:textColor">@color/grayLight</item>
     </style>
 

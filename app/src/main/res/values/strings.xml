@@ -10,5 +10,15 @@
     <!-- All docs screen -->
     <string name="quick_view">Быстрый доступ</string>
     <string name="opened_at">Открыто</string>
+    <string name="stub_doc_size">46 Гб</string>
+    <string name="stub_doc_date">23.06.18 14:42</string>
+
+    <!-- Dialog Document Details -->
+    <string name="file_type">Тип файла</string>
+    <string name="file_size">Размер</string>
+    <string name="description">Описание</string>
+    <string name="open_with">Открыть с помощью</string>
+    <string name="ok">Ок</string>
+    <string name="stub_description">Lorem impsum dolor sit amet, consectetur adipiscing elit</string>
 
 </resources>

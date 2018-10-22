@@ -16,6 +16,7 @@
             android:id="@+id/toolbar_main"
             android:layout_width="match_parent"
             android:layout_height="@dimen/app_bar_height"
+            app:layout_scrollFlags="scroll|enterAlways"
             app:title="@string/documents"
             app:titleTextColor="@color/white" />
 
@@ -24,9 +25,9 @@
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:background="@color/green"
-            app:tabTextColor="@color/colorTabLayoutTextUnselected"
             app:tabIndicatorColor="@color/white"
-            app:tabSelectedTextColor="@color/white"/>
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/colorTabLayoutTextUnselected" />
 
     </android.support.design.widget.AppBarLayout>
 
