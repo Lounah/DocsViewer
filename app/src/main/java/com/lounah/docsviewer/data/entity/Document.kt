@@ -5,8 +5,8 @@ import android.arch.persistence.room.PrimaryKey
 
 @Entity(tableName = "documents")
 data class Document(
-        var name: String = "",
-        @PrimaryKey var id: String = "",
-        var type: String = "",
-        var link: String = ""
+        var name: String,
+        @PrimaryKey var id: String,
+        var type: String,
+        var link: String
 )

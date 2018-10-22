@@ -6,21 +6,22 @@ import com.lounah.docsviewer.data.entity.Document
 import com.lounah.docsviewer.data.mapper.DataSourceMapper.mapDocumentBeanToDocumentEntity
 import com.lounah.docsviewer.domain.repository.DocumentsRepository
 import io.reactivex.Flowable
+import io.reactivex.Observable
 import io.reactivex.Single
 import javax.inject.Inject
 
 class DocumentsRepositoryImpl @Inject constructor(private val docsDao: DocsDao,
                                                   private val api: DocsApi) : DocumentsRepository {
 
-    override fun getAllDocuments(): Flowable<List<Document>> {
-        return Single.merge(getAllDocsFromDb(), getAllDocsFromApi())
+    override fun getAllDocuments(): Observable<List<Document>> {
+        return Observable.concatArray(getAllDocsFromDb(), getAllDocsFromApi().toObservable())
     }
 
     override fun getDocumentById(id: String): Single<Document> {
         return api.getDocById(id).map { mapDocumentBeanToDocumentEntity(it)  }
     }
 
-    private fun getAllDocsFromDb(): Single<List<Document>> = docsDao.getAllDocs()
+    private fun getAllDocsFromDb(): Observable<List<Document>> = docsDao.getAllDocs().toObservable()
 
     private fun getAllDocsFromApi(): Single<List<Document>> = api.getAllDocs()
             .map { mapDocumentBeanToDocumentEntity(it) }
