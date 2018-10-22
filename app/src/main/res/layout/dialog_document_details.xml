@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_docdetails_title"
+            style="@style/TextStyle.Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_docdetails_star"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Название файла.pdf" />
+
+        <TextView
+            android:id="@+id/tv_docdetails_document_date"
+            style="@style/TextStyle.Small.Light"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="@dimen/app_margin_medium"
+            android:drawableStart="@drawable/ic_clock_18dp"
+            android:text="@string/stub_doc_date"
+            app:layout_constraintEnd_toStartOf="@+id/iv_docdetails_star"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_docdetails_title" />
+
+        <ImageView
+            android:id="@+id/iv_docdetails_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_docdetails_document_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_docdetails_title"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_star_unselected_36dp" />
+
+        <View
+            android:id="@+id/view_docdetails_stub_preview"
+            android:layout_width="match_parent"
+            android:layout_height="197dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grayLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_docdetails_document_date" />
+
+        <TextView
+            android:id="@+id/tv_docdetails_file_type_label"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/file_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_docdetails_stub_preview" />
+
+        <TextView
+            android:id="@+id/tv_docdetails_file_type"
+            style="@style/TextStyle.Light"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_docdetails_file_type_label"
+            app:layout_constraintTop_toBottomOf="@+id/view_docdetails_stub_preview"
+            tools:text="pdf файл" />
+
+        <TextView
+            android:id="@+id/tv_docdetails_file_size_label"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/file_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_docdetails_file_type_label" />
+
+        <TextView
+            android:id="@+id/tv_docdetails_file_size"
+            style="@style/TextStyle.Light"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/stub_doc_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_docdetails_file_type_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_docdetails_file_type" />
+
+        <TextView
+            android:id="@+id/tv_docdetails_description_label"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_docdetails_file_size_label" />
+
+        <TextView
+            android:id="@+id/tv_docdetails_description"
+            style="@style/TextStyle.Light"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/stub_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_docdetails_file_type_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_docdetails_file_size" />
+
+
+        <Button
+            android:id="@+id/button_docdetails_ok"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/ok"
+            android:textColor="@color/colorAccent"
+            android:theme="@style/BorderlessButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_docdetails_description" />
+
+        <Button
+            android:id="@+id/button_docdetails_open_with"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/open_with"
+            android:textColor="@color/colorAccent"
+            android:theme="@style/BorderlessButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_docdetails_ok"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_docdetails_description" />
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
