@@ -65,6 +65,10 @@ dependencies {
     implementation deps.support.recycler
     implementation deps.support.card_view
 
+    // UI
+    implementation deps.ui.delegateAdapters
+
+
     // VM
     implementation deps.arch.view_model
     implementation deps.arch.lifecycle_extension
