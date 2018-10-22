@@ -25,6 +25,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun initViewPager() {
+        viewpager_main.offscreenPageLimit = 3
         viewpager_main.adapter = MainViewPagerAdapter(supportFragmentManager)
     }
 
