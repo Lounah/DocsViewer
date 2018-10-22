@@ -1,6 +1,7 @@
 package com.lounah.docsviewer.di.docsviewer
 
 import com.lounah.docsviewer.presentation.alldocs.AllDocsFragment
+import com.lounah.docsviewer.presentation.alldocs.docdetails.DocDetailsDialogFragment
 import com.lounah.docsviewer.presentation.favourites.FavouritesFragment
 import com.lounah.docsviewer.presentation.sections.SectionsFragment
 import dagger.Module
@@ -16,4 +17,7 @@ interface AppFragmentsInjectorBuilders {
 
     @ContributesAndroidInjector
     fun provideSectionsFragment(): SectionsFragment
+
+    @ContributesAndroidInjector
+    fun provideDocDetailsFragment(): DocDetailsDialogFragment
 }

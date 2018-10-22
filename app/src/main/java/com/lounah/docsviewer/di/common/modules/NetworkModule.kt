@@ -2,7 +2,7 @@ package com.lounah.docsviewer.di.common.modules
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.lounah.docsviewer.data.DocsApi
+import com.lounah.docsviewer.data.datasource.remote.DocsApi
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
