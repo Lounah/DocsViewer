@@ -3,7 +3,7 @@ package com.lounah.docsviewer.data.mapper
 import com.lounah.docsviewer.data.datasource.remote.beans.DocumentBean
 import com.lounah.docsviewer.data.entity.Document
 
-object DatasourceMapper {
+object DataSourceMapper {
 
     fun mapDocumentBeanToDocumentEntity(bean: DocumentBean) = Document(
             id = bean.id ?: "",
