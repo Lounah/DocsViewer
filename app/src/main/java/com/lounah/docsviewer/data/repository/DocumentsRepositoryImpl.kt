@@ -3,7 +3,7 @@ package com.lounah.docsviewer.data.repository
 import com.lounah.docsviewer.data.datasource.local.dao.DocsDao
 import com.lounah.docsviewer.data.datasource.remote.DocsApi
 import com.lounah.docsviewer.data.entity.Document
-import com.lounah.docsviewer.data.mapper.DatasourceMapper.mapDocumentBeanToDocumentEntity
+import com.lounah.docsviewer.data.mapper.DataSourceMapper.mapDocumentBeanToDocumentEntity
 import com.lounah.docsviewer.domain.repository.DocumentsRepository
 import io.reactivex.Flowable
 import io.reactivex.Single
