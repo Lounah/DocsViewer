@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cl_item_document"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:foreground="?selectableItemBackground"
-    tools:layout_height="500dp">
+    android:soundEffectsEnabled="true">
 
     <ImageView
         android:id="@+id/iv_item_alldocs_document"
@@ -29,20 +28,27 @@
         android:layout_marginTop="24dp"
         android:ellipsize="end"
         android:maxLines="2"
-        app:layout_constraintEnd_toStartOf="@+id/iv_item_alldocs_advanced"
+        app:layout_constraintEnd_toStartOf="@+id/fl_alldocs_advanced"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/iv_item_alldocs_document"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/iv_item_alldocs_advanced"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:background="?selectableItemBackground"
-        android:src="@drawable/ic_dots_24dp"
+    <FrameLayout
+        android:id="@+id/fl_alldocs_advanced"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:foreground="?selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_item_alldocs_advanced"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_dots_24dp" />
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tv_item_alldocs_document_date"

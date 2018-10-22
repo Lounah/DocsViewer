@@ -10,7 +10,7 @@ class AllDocsDelegateAdapter
 
     override fun onBind(item: AllDocsDelegateViewModel, viewHolder: KViewHolder) = with(viewHolder) {
         tv_item_alldocs_document_doctitle.text = "${item.document.name}.${item.document.type}"
-        iv_item_alldocs_advanced.setOnClickListener {
+        fl_alldocs_advanced.setOnClickListener {
             item.onClickListener::onOptionsClicked.invoke(item.document)
         }
         cl_item_document.setOnClickListener {
